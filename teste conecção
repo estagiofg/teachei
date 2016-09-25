@@ -1,0 +1,33 @@
+# teachei
+
+
+ 1 pagina - parte do index --- teste 
+
+// chamando a conexão
+<?php include("conexao.php"); ?>
+
+
+
+2 - pagina conexão com o banco
+
+<?php
+
+// local do banco
+$local = "localhost";
+// usuario do banco
+$usuario = "root";
+//senha do banco
+$senha = "";
+//nome do banco
+$banco = "testedb";
+
+//A conexão
+$conexao = mysqli_connect($local, $usuario, $senha, $banco);
+
+// If de teste 
+ if(!$conexao){
+	 echo "Nao encontrado o banco";
+	 }else{
+		echo"conexao feita com sucesso";
+		 }
+?>
