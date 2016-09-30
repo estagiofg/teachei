@@ -1,0 +1,1878 @@
+/*
+
+  Warning:  This CSS file has been auto-generated from a .less file.  If you edit it your edits will be lost the next time LessCSS is run.
+
+  It would be best to make a separate CSS file and place any overriding CSS in there.  If you must access the original CSS, do so by editing the .less files.
+
+*/
+/* global settings */
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+}
+/* grid */
+.grid {
+  width: 100%;
+}
+.upage-content > .grid {
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* gutter around whole design */
+/*
+.upage-content > .grid-pad {
+  padding: @gutter @gutter 0px @gutter;
+}
+*/
+/* column */
+.urow:not(.cright) > .col {
+  float: left;
+}
+.urow.cright > .col {
+  float: right;
+}
+.col {
+  position: relative;
+  min-height: 1px;
+}
+.content-area {
+  position: relative;
+}
+/* row */
+.urow {
+  clear: both;
+  position: relative;
+}
+form.urow {
+  margin-bottom: 0px;
+}
+.widget {
+  position: relative;
+}
+/* for widgets and the like
+   <div class="table-thing widget">
+    <div class="narrow-control w85"> my width is set </div>
+    <div class="wide-control"> my width is 100%, minus the set width of the narrow-control</div>
+   </div>
+
+   .w85 { width:85px; }
+*/
+.vertical-col > *,
+.vertical-col > .table-thing,
+.vertical-col > .afScrollPanel > .table-thing,
+.wrapping-col > .no_wrap.table-thing,
+.wrapping-col > .afScrollPanel > .no_wrap.table-thing {
+  width: 100%;
+}
+#afui .vertical-col > .afScrollPanel > .widget,
+#afui .vertical-col > .widget,
+.vertical-col > .widget,
+.camera > .widget {
+  width: calc(100% - 10px);
+  margin-left: 5px;
+}
+.col > .vertical-col > .widget {
+  width: 100%;
+  margin-left: 0;
+}
+.table-thing {
+  display: table;
+}
+.wide-control {
+  display: table-cell;
+  width: 100%;
+}
+.narrow-control {
+  display: table-cell;
+}
+/* wrapping column */
+.wrapping-col.right > *,
+.wrapping-col.right > .afScrollPanel > * {
+  float: right;
+}
+/* margin: 0 5px;   move margin to another class */
+.wrapping-col.left > *,
+.wrapping-col.left > .afScrollPanel > * {
+  float: left;
+}
+/* center and right alignment */
+.vertical-col.center {
+  text-align: center;
+}
+.vertical-col.right {
+  text-align: right;
+}
+.vertical-col.right > *,
+.col > .vertical-col.right > .widget,
+.vertical-col.right > .afScrollPanel > * {
+  margin-left: auto;
+}
+.vertical-col.center > *,
+.col > .vertical-col.center > .widget,
+.vertical-col.center > .afScrollPanel > * {
+  margin-left: auto;
+  margin-right: auto;
+}
+.wrapping-col:not(.horiz-area) > .no_wrap,
+.wrapping-col:not(.horiz-area) > .afScrollPanel > .no_wrap {
+  float: none;
+  clear: both;
+  /* margin: 8px 0px; */
+
+}
+.center-h-v-col > .widget {
+  position: absolute !important;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  margin-top: 0 !important;
+}
+/* shim */
+.uib_shim {
+  clear: both;
+  float: none !important;
+  width: 100%;
+  position: relative;
+  height: 0px;
+  line-height: 0px;
+  font-size: 0px;
+  display: block;
+}
+/* content-box fix for box-sizing */
+.content-box,
+.content-box:before,
+.content-box:after {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+/* page */
+.hidden:not(.afPopup) {
+  display: none;
+}
+.upage-content,
+.upage-outer {
+  position: relative;
+}
+html,
+body {
+  height: 100%;
+}
+body:not(#afui) .upage,
+body:not(#afui) .upage-content {
+  height: 100%;
+}
+body:not(#afui) .upage-outer {
+  height: auto;
+}
+/* position relative works fine. but fixed can be elected as well */
+/* .upage-content, .upage-outer { position: fixed; height:100%; } */
+.upage {
+  overflow-x: hidden;
+}
+.upage-content {
+  z-index: 1;
+}
+#afui .upage {
+  padding: 0;
+}
+/* sidebars and crossbars */
+.uib_sidebar {
+  position: fixed;
+  height: 100%;
+  top: 0px;
+}
+.uib_crossbar {
+  position: fixed;
+  width: 100%;
+  left: 0px;
+}
+.leftbar,
+.rightbar {
+  z-index: 2;
+}
+.reveal.leftbar {
+  left: 0px;
+  z-index: 0;
+}
+.reveal.rightbar {
+  right: 0px;
+  z-index: 0;
+}
+.leftbar.oh,
+.rightbar.oh {
+  z-index: 3;
+}
+.reveal {
+  z-index: 0;
+  visibility: hidden;
+}
+.topbar {
+  z-index: 3;
+}
+.topbar.reveal {
+  top: 0px;
+  z-index: 0;
+}
+.botbar {
+  z-index: 3;
+  position: fixed;
+}
+.botbar.oh,
+.topbar.oh {
+  z-index: 4;
+}
+.sidebar-content {
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+  margin: 0;
+}
+.sidebar-thumb {
+  position: relative;
+  margin: 0;
+  /* background-image:url('images/gripper.png'); */
+}
+.template {
+  display: none !important;
+}
+.uib-absolute {
+  position: absolute !important;
+}
+.content-block-inner {
+  box-sizing: content-box;
+}
+.navbar-inner .widget-container {
+  display: inline-flex;
+}
+.searchbar {
+  width: 100% !important;
+  margin: 0 !important;
+}
+#afui .panel {
+  padding: 0px;
+}
+#afui .pages {
+  height: 100%;
+}
+#afui .upage-outer {
+  height: 100%;
+}
+body#afui.v2 {
+  overflow-y: auto !important;
+}
+body#afui .panel > .widget > input[type="radio"] + label,
+body#afui .panel > .widget > input[type="checkbox"] + label {
+  padding-top: 14px;
+}
+#afui .table-thing input[type="radio"] + label,
+#afui .table-thing input[type="checkbox"] + label {
+  padding-top: 6px !important;
+}
+input.toggle + label:after {
+  width: 32px;
+}
+body#afui .splt {
+  width: 200px;
+}
+@media all {
+  .back1 {
+    background-color: #ff8247;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+@media all and (min-width: 0px) {
+  width: 96%;
+  min-width: 95%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+@media all {
+  
+}
+.figure-align {
+  display: table;
+  margin: 0px auto;
+}
+.figure-align img {
+  width: 100%;
+}
+.image-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+@media all {
+  
+}
+@media all {
+  .vertical-col > .d-margins,
+  .vertical-col > .afScrollPanel > .d-margins {
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+  }
+  .vertical-col > .d-margins,
+  .vertical-col > .afScrollPanel > .d-margins {
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+  }
+}
+@media all {
+  
+}
+@media all and (min-width: 0px) {
+  .row-height-2 > .col > .content-area {
+    min-height: 313px;
+  }
+}
+@media all {
+  .back2 {
+    background-color: #ffffff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    border-radius: 20px;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+@media all and (min-width: 0px) {
+  .row-height-3 > .col > .content-area {
+    min-height: 30px;
+  }
+}
+.bar > .buttons .d-margins {
+  margin: auto;
+}
+.bar {
+  z-index: 1;
+}
+.upage-outer.fixed-header-footer {
+  position: static;
+}
+.uib-card {
+  position: relative;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.card-header,
+.card-left,
+.card-footer,
+.card-right {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+.card-header {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  width: auto;
+}
+.card-footer {
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: auto;
+}
+.card-left {
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+}
+.card-right {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+.uib-card section .widget-divider:only-of-type {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: auto !important;
+  width: auto !important;
+}
+.uib-card .widget-divider:only-of-type div {
+  height: 100%;
+}
+.card_col > .widget {
+  display: inline-block;
+  column-break-inside: avoid;
+}
+@media all {
+  .card-columns-2 {
+    column-width: 90%;
+    -webkit-column-width: 90%;
+    -moz-column-width: 90%;
+    column-count: 1;
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-gap: 10px;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-fill: balance;
+    -webkit-column-fill: balance;
+    -moz-column-fill: balance;
+  }
+}
+@media all {
+  .section-dimension-3 .card-header {
+    height: 40px;
+  }
+  .section-dimension-3 .card-footer {
+    height: 40px;
+  }
+  .section-dimension-3 .card-left {
+    width: 50px;
+  }
+  .section-dimension-3 .card-right {
+    width: 50px;
+  }
+  .section-dimension-3 {
+    min-height: 100px;
+  }
+  .section-dimension-3 {
+    min-width: 100%;
+  }
+  div.section-dimension-3.header-on-left .card-left {
+    top: 40px;
+  }
+  div.section-dimension-3.header-on-left .card-header {
+    left: 0px;
+  }
+  div.section-dimension-3.left-on-header .card-left {
+    top: 0px;
+  }
+  div.section-dimension-3.left-on-header .card-header {
+    left: 50px;
+  }
+  div.section-dimension-3.header-on-right .card-right {
+    top: 40px;
+  }
+  div.section-dimension-3.header-on-right .card-header {
+    right: 0px;
+  }
+  div.section-dimension-3.right-on-header .card-right {
+    top: 0px;
+  }
+  div.section-dimension-3.right-on-header .card-header {
+    right: 50px;
+  }
+  div.section-dimension-3.footer-on-left .card-left {
+    bottom: 40px;
+  }
+  div.section-dimension-3.footer-on-left .card-footer {
+    left: 0px;
+  }
+  div.section-dimension-3.left-on-footer .card-left {
+    bottom: 0px;
+  }
+  div.section-dimension-3.left-on-footer .card-footer {
+    left: 50px;
+  }
+  div.section-dimension-3.footer-on-right .card-right {
+    bottom: 40px;
+  }
+  div.section-dimension-3.footer-on-right .card-footer {
+    right: 0px;
+  }
+  div.section-dimension-3.right-on-footer .card-right {
+    bottom: 0px;
+  }
+  div.section-dimension-3.right-on-footer .card-footer {
+    right: 50px;
+  }
+  .section-dimension-3.cpad-1 {
+    padding: 40px 0px 0px 0px;
+  }
+  .section-dimension-3.cpad-1 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-3.cpad-8 {
+    padding: 0px 50px 0px 0px;
+  }
+  .section-dimension-3.cpad-8 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    bottom: 0px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-3.cpad-9 {
+    padding: 40px 50px 0px 0px;
+  }
+  .section-dimension-3.cpad-9 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    bottom: 0px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-3.cpad-4 {
+    padding: 0px 0px 40px 0px;
+  }
+  .section-dimension-3.cpad-4 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 40px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-3.cpad-5 {
+    padding: 40px 0px 40px 0px;
+  }
+  .section-dimension-3.cpad-5 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    bottom: 40px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-3.cpad-12 {
+    padding: 0px 50px 40px 0px;
+  }
+  .section-dimension-3.cpad-12 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    bottom: 40px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-3.cpad-13 {
+    padding: 40px 50px 40px 0px;
+  }
+  .section-dimension-3.cpad-13 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    bottom: 40px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-3.cpad-2 {
+    padding: 0px 0px 0px 50px;
+  }
+  .section-dimension-3.cpad-2 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-3.cpad-3 {
+    padding: 40px 0px 0px 50px;
+  }
+  .section-dimension-3.cpad-3 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    bottom: 0px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-3.cpad-10 {
+    padding: 0px 50px 0px 50px;
+  }
+  .section-dimension-3.cpad-10 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    bottom: 0px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-3.cpad-11 {
+    padding: 40px 50px 0px 50px;
+  }
+  .section-dimension-3.cpad-11 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    bottom: 0px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-3.cpad-6 {
+    padding: 0px 0px 40px 50px;
+  }
+  .section-dimension-3.cpad-6 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 40px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-3.cpad-7 {
+    padding: 40px 0px 40px 50px;
+  }
+  .section-dimension-3.cpad-7 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    bottom: 40px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-3.cpad-14 {
+    padding: 0px 50px 40px 50px;
+  }
+  .section-dimension-3.cpad-14 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    bottom: 40px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-3.cpad-15 {
+    padding: 40px 50px 40px 50px;
+  }
+  .section-dimension-3.cpad-15 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    bottom: 40px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-3.cpad-0 {
+    padding: 0px 0px 0px 0px;
+  }
+  .section-dimension-3.cpad-0 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+}
+@media all {
+  .section-dimension-4 .card-header {
+    height: 40px;
+  }
+  .section-dimension-4 .card-footer {
+    height: 40px;
+  }
+  .section-dimension-4 .card-left {
+    width: 50px;
+  }
+  .section-dimension-4 .card-right {
+    width: 50px;
+  }
+  .section-dimension-4 {
+    min-height: 100px;
+  }
+  .section-dimension-4 {
+    min-width: 100%;
+  }
+  div.section-dimension-4.header-on-left .card-left {
+    top: 40px;
+  }
+  div.section-dimension-4.header-on-left .card-header {
+    left: 0px;
+  }
+  div.section-dimension-4.left-on-header .card-left {
+    top: 0px;
+  }
+  div.section-dimension-4.left-on-header .card-header {
+    left: 50px;
+  }
+  div.section-dimension-4.header-on-right .card-right {
+    top: 40px;
+  }
+  div.section-dimension-4.header-on-right .card-header {
+    right: 0px;
+  }
+  div.section-dimension-4.right-on-header .card-right {
+    top: 0px;
+  }
+  div.section-dimension-4.right-on-header .card-header {
+    right: 50px;
+  }
+  div.section-dimension-4.footer-on-left .card-left {
+    bottom: 40px;
+  }
+  div.section-dimension-4.footer-on-left .card-footer {
+    left: 0px;
+  }
+  div.section-dimension-4.left-on-footer .card-left {
+    bottom: 0px;
+  }
+  div.section-dimension-4.left-on-footer .card-footer {
+    left: 50px;
+  }
+  div.section-dimension-4.footer-on-right .card-right {
+    bottom: 40px;
+  }
+  div.section-dimension-4.footer-on-right .card-footer {
+    right: 0px;
+  }
+  div.section-dimension-4.right-on-footer .card-right {
+    bottom: 0px;
+  }
+  div.section-dimension-4.right-on-footer .card-footer {
+    right: 50px;
+  }
+  .section-dimension-4.cpad-1 {
+    padding: 40px 0px 0px 0px;
+  }
+  .section-dimension-4.cpad-1 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-4.cpad-8 {
+    padding: 0px 50px 0px 0px;
+  }
+  .section-dimension-4.cpad-8 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    bottom: 0px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-4.cpad-9 {
+    padding: 40px 50px 0px 0px;
+  }
+  .section-dimension-4.cpad-9 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    bottom: 0px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-4.cpad-4 {
+    padding: 0px 0px 40px 0px;
+  }
+  .section-dimension-4.cpad-4 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 40px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-4.cpad-5 {
+    padding: 40px 0px 40px 0px;
+  }
+  .section-dimension-4.cpad-5 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    bottom: 40px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-4.cpad-12 {
+    padding: 0px 50px 40px 0px;
+  }
+  .section-dimension-4.cpad-12 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    bottom: 40px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-4.cpad-13 {
+    padding: 40px 50px 40px 0px;
+  }
+  .section-dimension-4.cpad-13 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    bottom: 40px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-4.cpad-2 {
+    padding: 0px 0px 0px 50px;
+  }
+  .section-dimension-4.cpad-2 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-4.cpad-3 {
+    padding: 40px 0px 0px 50px;
+  }
+  .section-dimension-4.cpad-3 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    bottom: 0px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-4.cpad-10 {
+    padding: 0px 50px 0px 50px;
+  }
+  .section-dimension-4.cpad-10 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    bottom: 0px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-4.cpad-11 {
+    padding: 40px 50px 0px 50px;
+  }
+  .section-dimension-4.cpad-11 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    bottom: 0px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-4.cpad-6 {
+    padding: 0px 0px 40px 50px;
+  }
+  .section-dimension-4.cpad-6 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 40px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-4.cpad-7 {
+    padding: 40px 0px 40px 50px;
+  }
+  .section-dimension-4.cpad-7 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    bottom: 40px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-4.cpad-14 {
+    padding: 0px 50px 40px 50px;
+  }
+  .section-dimension-4.cpad-14 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    bottom: 40px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-4.cpad-15 {
+    padding: 40px 50px 40px 50px;
+  }
+  .section-dimension-4.cpad-15 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    bottom: 40px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-4.cpad-0 {
+    padding: 0px 0px 0px 0px;
+  }
+  .section-dimension-4.cpad-0 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+}
+@media all {
+  .section-dimension-5 .card-header {
+    height: 40px;
+  }
+  .section-dimension-5 .card-footer {
+    height: 40px;
+  }
+  .section-dimension-5 .card-left {
+    width: 50px;
+  }
+  .section-dimension-5 .card-right {
+    width: 50px;
+  }
+  .section-dimension-5 {
+    min-height: 100px;
+  }
+  .section-dimension-5 {
+    min-width: 100%;
+  }
+  div.section-dimension-5.header-on-left .card-left {
+    top: 40px;
+  }
+  div.section-dimension-5.header-on-left .card-header {
+    left: 0px;
+  }
+  div.section-dimension-5.left-on-header .card-left {
+    top: 0px;
+  }
+  div.section-dimension-5.left-on-header .card-header {
+    left: 50px;
+  }
+  div.section-dimension-5.header-on-right .card-right {
+    top: 40px;
+  }
+  div.section-dimension-5.header-on-right .card-header {
+    right: 0px;
+  }
+  div.section-dimension-5.right-on-header .card-right {
+    top: 0px;
+  }
+  div.section-dimension-5.right-on-header .card-header {
+    right: 50px;
+  }
+  div.section-dimension-5.footer-on-left .card-left {
+    bottom: 40px;
+  }
+  div.section-dimension-5.footer-on-left .card-footer {
+    left: 0px;
+  }
+  div.section-dimension-5.left-on-footer .card-left {
+    bottom: 0px;
+  }
+  div.section-dimension-5.left-on-footer .card-footer {
+    left: 50px;
+  }
+  div.section-dimension-5.footer-on-right .card-right {
+    bottom: 40px;
+  }
+  div.section-dimension-5.footer-on-right .card-footer {
+    right: 0px;
+  }
+  div.section-dimension-5.right-on-footer .card-right {
+    bottom: 0px;
+  }
+  div.section-dimension-5.right-on-footer .card-footer {
+    right: 50px;
+  }
+  .section-dimension-5.cpad-1 {
+    padding: 40px 0px 0px 0px;
+  }
+  .section-dimension-5.cpad-1 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-5.cpad-8 {
+    padding: 0px 50px 0px 0px;
+  }
+  .section-dimension-5.cpad-8 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    bottom: 0px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-5.cpad-9 {
+    padding: 40px 50px 0px 0px;
+  }
+  .section-dimension-5.cpad-9 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    bottom: 0px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-5.cpad-4 {
+    padding: 0px 0px 40px 0px;
+  }
+  .section-dimension-5.cpad-4 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 40px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-5.cpad-5 {
+    padding: 40px 0px 40px 0px;
+  }
+  .section-dimension-5.cpad-5 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    bottom: 40px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-5.cpad-12 {
+    padding: 0px 50px 40px 0px;
+  }
+  .section-dimension-5.cpad-12 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    bottom: 40px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-5.cpad-13 {
+    padding: 40px 50px 40px 0px;
+  }
+  .section-dimension-5.cpad-13 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    bottom: 40px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-5.cpad-2 {
+    padding: 0px 0px 0px 50px;
+  }
+  .section-dimension-5.cpad-2 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-5.cpad-3 {
+    padding: 40px 0px 0px 50px;
+  }
+  .section-dimension-5.cpad-3 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    bottom: 0px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-5.cpad-10 {
+    padding: 0px 50px 0px 50px;
+  }
+  .section-dimension-5.cpad-10 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    bottom: 0px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-5.cpad-11 {
+    padding: 40px 50px 0px 50px;
+  }
+  .section-dimension-5.cpad-11 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    bottom: 0px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-5.cpad-6 {
+    padding: 0px 0px 40px 50px;
+  }
+  .section-dimension-5.cpad-6 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 40px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-5.cpad-7 {
+    padding: 40px 0px 40px 50px;
+  }
+  .section-dimension-5.cpad-7 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    bottom: 40px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-5.cpad-14 {
+    padding: 0px 50px 40px 50px;
+  }
+  .section-dimension-5.cpad-14 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    bottom: 40px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-5.cpad-15 {
+    padding: 40px 50px 40px 50px;
+  }
+  .section-dimension-5.cpad-15 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    bottom: 40px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-5.cpad-0 {
+    padding: 0px 0px 0px 0px;
+  }
+  .section-dimension-5.cpad-0 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+}
+@media all {
+  .section-dimension-6 .card-header {
+    height: 40px;
+  }
+  .section-dimension-6 .card-footer {
+    height: 40px;
+  }
+  .section-dimension-6 .card-left {
+    width: 50px;
+  }
+  .section-dimension-6 .card-right {
+    width: 50px;
+  }
+  .section-dimension-6 {
+    min-height: 100px;
+  }
+  .section-dimension-6 {
+    min-width: 100%;
+  }
+  div.section-dimension-6.header-on-left .card-left {
+    top: 40px;
+  }
+  div.section-dimension-6.header-on-left .card-header {
+    left: 0px;
+  }
+  div.section-dimension-6.left-on-header .card-left {
+    top: 0px;
+  }
+  div.section-dimension-6.left-on-header .card-header {
+    left: 50px;
+  }
+  div.section-dimension-6.header-on-right .card-right {
+    top: 40px;
+  }
+  div.section-dimension-6.header-on-right .card-header {
+    right: 0px;
+  }
+  div.section-dimension-6.right-on-header .card-right {
+    top: 0px;
+  }
+  div.section-dimension-6.right-on-header .card-header {
+    right: 50px;
+  }
+  div.section-dimension-6.footer-on-left .card-left {
+    bottom: 40px;
+  }
+  div.section-dimension-6.footer-on-left .card-footer {
+    left: 0px;
+  }
+  div.section-dimension-6.left-on-footer .card-left {
+    bottom: 0px;
+  }
+  div.section-dimension-6.left-on-footer .card-footer {
+    left: 50px;
+  }
+  div.section-dimension-6.footer-on-right .card-right {
+    bottom: 40px;
+  }
+  div.section-dimension-6.footer-on-right .card-footer {
+    right: 0px;
+  }
+  div.section-dimension-6.right-on-footer .card-right {
+    bottom: 0px;
+  }
+  div.section-dimension-6.right-on-footer .card-footer {
+    right: 50px;
+  }
+  .section-dimension-6.cpad-1 {
+    padding: 40px 0px 0px 0px;
+  }
+  .section-dimension-6.cpad-1 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-6.cpad-8 {
+    padding: 0px 50px 0px 0px;
+  }
+  .section-dimension-6.cpad-8 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    bottom: 0px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-6.cpad-9 {
+    padding: 40px 50px 0px 0px;
+  }
+  .section-dimension-6.cpad-9 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    bottom: 0px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-6.cpad-4 {
+    padding: 0px 0px 40px 0px;
+  }
+  .section-dimension-6.cpad-4 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 40px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-6.cpad-5 {
+    padding: 40px 0px 40px 0px;
+  }
+  .section-dimension-6.cpad-5 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    bottom: 40px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-6.cpad-12 {
+    padding: 0px 50px 40px 0px;
+  }
+  .section-dimension-6.cpad-12 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    bottom: 40px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-6.cpad-13 {
+    padding: 40px 50px 40px 0px;
+  }
+  .section-dimension-6.cpad-13 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    bottom: 40px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-6.cpad-2 {
+    padding: 0px 0px 0px 50px;
+  }
+  .section-dimension-6.cpad-2 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-6.cpad-3 {
+    padding: 40px 0px 0px 50px;
+  }
+  .section-dimension-6.cpad-3 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    bottom: 0px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-6.cpad-10 {
+    padding: 0px 50px 0px 50px;
+  }
+  .section-dimension-6.cpad-10 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    bottom: 0px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-6.cpad-11 {
+    padding: 40px 50px 0px 50px;
+  }
+  .section-dimension-6.cpad-11 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    bottom: 0px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-6.cpad-6 {
+    padding: 0px 0px 40px 50px;
+  }
+  .section-dimension-6.cpad-6 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 40px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-6.cpad-7 {
+    padding: 40px 0px 40px 50px;
+  }
+  .section-dimension-6.cpad-7 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    bottom: 40px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-6.cpad-14 {
+    padding: 0px 50px 40px 50px;
+  }
+  .section-dimension-6.cpad-14 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    bottom: 40px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-6.cpad-15 {
+    padding: 40px 50px 40px 50px;
+  }
+  .section-dimension-6.cpad-15 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    bottom: 40px;
+    left: 50px;
+    height: auto !important;
+    width: auto !important;
+  }
+  .section-dimension-6.cpad-0 {
+    padding: 0px 0px 0px 0px;
+  }
+  .section-dimension-6.cpad-0 > .widget-divider:only-of-type {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: auto !important;
+    width: auto !important;
+  }
+}
+.uib_row_1:not(.cright) > .col {
+  padding-right: 20px;
+}
+.uib_row_1.cright > .col {
+  padding-left: 20px;
+}
+@media all {
+  .col-0_12-12 {
+    width: auto;
+    float: none !important;
+  }
+  .urow:not(.cright) > .col-0_12-12 {
+    padding-right: 0px !important;
+  }
+  .urow.cright > .col-0_12-12 {
+    padding-left: 0px !important;
+  }
+}
+.vertical-col > ion-list.widget,
+.vertical-col > .widget.item-radio,
+.vertical-col > .widget.item-toggle,
+.vertical-col > .widget.list,
+.vertical-col > .widget.item-select,
+.vertical-col > .widget.item-checkbox,
+.vertical-col > .widget.button {
+  margin-left: 0;
+  display: inline-block;
+  width: 100%;
+}
+.vertical-col > .widget.item.range,
+.vertical-col > .widget.button-bar,
+.vertical-col > .widget.tabs {
+  margin-left: 0;
+  width: 100%;
+}
+.vertical-col > .widget.item-input {
+  margin-left: 0;
+  display: inline-flex;
+  width: 100%;
+}
+.vertical-col > .widget.item-input.item-floating-label,
+.vertical-col > .widget.item-input.item-stacked-label {
+  margin-left: 0;
+  display: inline-block;
+  width: 100%;
+}
+@media all {
+  .wrapping-col > .btn_margins_buscar,
+  .wrapping-col > .afScrollPanel > .btn_margins_buscar {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .wrapping-col > .btn_margins_buscar,
+  .wrapping-col > .afScrollPanel > .btn_margins_buscar {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .btn_margins_buscar {
+    margin-top: 30%;
+  }
+}
+.uib_row_2:not(.cright) > .col {
+  padding-right: 20px;
+}
+.uib_row_2.cright > .col {
+  padding-left: 20px;
+}
+@media all {
+  .col-0_12-12 {
+    width: auto;
+    float: none !important;
+  }
+  .urow:not(.cright) > .col-0_12-12 {
+    padding-right: 0px !important;
+  }
+  .urow.cright > .col-0_12-12 {
+    padding-left: 0px !important;
+  }
+}
+.left-receptacle {
+  float: left;
+}
+.right-receptacle {
+  float: right;
+}
+[data-uib="media/text"] p:first-of-type {
+  margin-top: 0px;
+}
+.ellipsis {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+@media all {
+  .txt_resultado p {
+    text-align: center;
+  }
+}
+.uib-grid {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+}
+.uib-grid > .uib-grid-row {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  -o-flex: 1;
+  flex: 1;
+}
+.uib-grid > .uib-grid-row > .uib-grid-cell {
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  -o-flex: 1;
+  flex: 1;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
+  display: flex;
+}
+.uib-grid > .uib-grid-row > .uib-grid-cell > * {
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  -o-flex: 1;
+  flex: 1;
+  margin: 0 !important;
+  height: auto !important;
+}
+.uib-grid > .uib-grid-row > .uib-grid-cell > .button,
+.uib-grid > .uib-grid-row > .uib-grid-cell > [data-role="button"] {
+  padding: 0 !important;
+  display: -webkit-flex !important;
+  display: -moz-flex !important;
+  display: -ms-flexbox !important;
+  display: -o-flex !important;
+  display: flex !important;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+.uib-grid > .uib-grid-row > .uib-grid-cell > .table-thing {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
+  display: flex;
+}
+.uib-grid > .uib-grid-row > .uib-grid-cell > .table-thing > label.narrow-control {
+  display: none;
+}
+.uib-grid > .uib-grid-row > .uib-grid-cell > .table-thing > label.narrow-control + .wide-control {
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  -o-flex: 1;
+  flex: 1;
+  height: auto !important;
+}
+.uib-grid > .uib-grid-row:first-child > .uib-grid-cell > *,
+.uib-grid > .uib-grid-row:first-child > .uib-grid-cell .wide-control {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.uib-grid > .uib-grid-row:first-child > .uib-grid-cell:not(:first-child) > *,
+.uib-grid > .uib-grid-row:first-child > .uib-grid-cell:not(:first-child) .wide-control {
+  border-top-left-radius: 0 !important;
+}
+.uib-grid > .uib-grid-row:first-child > .uib-grid-cell:not(:last-child) > *,
+.uib-grid > .uib-grid-row:first-child > .uib-grid-cell:not(:last-child) .wide-control {
+  border-top-right-radius: 0 !important;
+}
+.uib-grid > .uib-grid-row:not(:first-child):not(:last-child) > .uib-grid-cell > *,
+.uib-grid > .uib-grid-row:not(:first-child):not(:last-child) > .uib-grid-cell .wide-control {
+  border-radius: 0 !important;
+}
+.uib-grid > .uib-grid-row:last-child > .uib-grid-cell > *,
+.uib-grid > .uib-grid-row:last-child > .uib-grid-cell .wide-control {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+.uib-grid > .uib-grid-row:last-child > .uib-grid-cell:not(:first-child) > *,
+.uib-grid > .uib-grid-row:last-child > .uib-grid-cell:not(:first-child) .wide-control {
+  border-bottom-left-radius: 0 !important;
+}
+.uib-grid > .uib-grid-row:last-child > .uib-grid-cell:not(:last-child) > *,
+.uib-grid > .uib-grid-row:last-child > .uib-grid-cell:not(:last-child) .wide-control {
+  border-bottom-right-radius: 0 !important;
+}
+@media all {
+  .grid-text,
+  .grid-text * {
+    font-size: 4vmax !important;
+  }
+  .grid-text,
+  .grid-text * {
+    font-size: 4vmax !important;
+  }
+}
+@media all {
+  .grid-height {
+    height: 60vh;
+  }
+}
+@media all {
+  .txt_periodo p {
+    text-align: center;
+  }
+}
+@media all {
+  
+}
+.uib_row_3:not(.cright) > .col {
+  padding-right: 20px;
+}
+.uib_row_3.cright > .col {
+  padding-left: 20px;
+}
+@media all {
+  .col-1_12-12 {
+    width: auto;
+    float: none !important;
+  }
+  .urow:not(.cright) > .col-1_12-12 {
+    padding-right: 0px !important;
+  }
+  .urow.cright > .col-1_12-12 {
+    padding-left: 0px !important;
+  }
+}
+@media all {
+  
+}
+@media all and (min-width: 0px) {
+  .row-height-4 > .col > .content-area {
+    min-height: 43px;
+  }
+}
+@media all and (min-width: 0px) {
+  .row-height-5 > .col > .content-area {
+    min-height: 100px;
+  }
+}
+@media all and (min-width: 0px) {
+  .row-height-6 > .col > .content-area {
+    min-height: 100px;
+  }
+}
+.uib_row_7:not(.cright) > .col {
+  padding-right: 20px;
+}
+.uib_row_7.cright > .col {
+  padding-left: 20px;
+}
+@media all {
+  .col-1_12-12 {
+    width: auto;
+    float: none !important;
+  }
+  .urow:not(.cright) > .col-1_12-12 {
+    padding-right: 0px !important;
+  }
+  .urow.cright > .col-1_12-12 {
+    padding-left: 0px !important;
+  }
+}
+@media all and (min-width: 0px) {
+  .row-height-7 > .col > .content-area {
+    min-height: 63px;
+  }
+}
+.uib_row_8:not(.cright) > .col {
+  padding-right: 20px;
+}
+.uib_row_8.cright > .col {
+  padding-left: 20px;
+}
+@media all {
+  .col-1_12-12 {
+    width: auto;
+    float: none !important;
+  }
+  .urow:not(.cright) > .col-1_12-12 {
+    padding-right: 0px !important;
+  }
+  .urow.cright > .col-1_12-12 {
+    padding-left: 0px !important;
+  }
+}
+@media all and (min-width: 0px) {
+  .row-height-8 > .col > .content-area {
+    min-height: 57px;
+  }
+}
+.uib_row_9:not(.cright) > .col {
+  padding-right: 20px;
+}
+.uib_row_9.cright > .col {
+  padding-left: 20px;
+}
+@media all {
+  .col-1_12-12 {
+    width: auto;
+    float: none !important;
+  }
+  .urow:not(.cright) > .col-1_12-12 {
+    padding-right: 0px !important;
+  }
+  .urow.cright > .col-1_12-12 {
+    padding-left: 0px !important;
+  }
+}
+@media all and (min-width: 0px) {
+  .row-height-9 > .col > .content-area {
+    min-height: 96px;
+  }
+}
+@media all {
+  .active-sprite-button:active div.uib-sprite {
+    background-image: url(../images/X.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+@media all {
+  .default-sprite-button div.uib-sprite {
+    background-image: url(../images/Exclaim.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+@media all {
+  .hover-sprite-button:hover div.uib-sprite {
+    background-image: url(../images/Checkmark.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+@media all {
+  .sprite-sizing {
+    height: 50px !important;
+    width: 10% !important;
+    -webkit-flex: 0 0 auto !important;
+    -moz-flex: 0 0 auto !important;
+    -ms-flex: 0 0 auto !important;
+    -o-flex: 0 0 auto !important;
+    flex: 0 0 auto !important;
+  }
+}
+@media all {
+  .btn_back {
+    -webkit-flex: 0 0 auto !important;
+    -moz-flex: 0 0 auto !important;
+    -ms-flex: 0 0 auto !important;
+    -o-flex: 0 0 auto !important;
+    flex: 0 0 auto !important;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    min-width: 150px;
+  }
+}
+@media all {
+  .btn_margin_back {
+    margin-top: 15%;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}
+@media all {
+  .wrapping-col > .select_margin,
+  .wrapping-col > .afScrollPanel > .select_margin {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .wrapping-col > .select_margin,
+  .wrapping-col > .afScrollPanel > .select_margin {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .select_margin {
+    margin-top: 10%;
+  }
+}
