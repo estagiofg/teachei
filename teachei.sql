@@ -45,6 +45,6 @@ constraint FK_aula_disciplina foreign key (cod_disciplina) references disciplina
 );
 
 create table admin(
-usuario varchar(30) primary key,
+nome varchar(30) primary key,
 senha varchar(30) NOT null
 );
