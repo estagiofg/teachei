@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>TeAchei</title>
+		<link rel="stylesheet" type="text/css" href="estilo2.css">
+	</head>
+
+	<body bgcolor="orange" >
+
+<div ><img  style="padding-left:210px;" src="img/logo_white.png" width="100" height="31"><font color="" style="padding-left:720px;"></font>
+
+		<div id="wrap" >
+         </br>
+		<center><h1><font color="blue">Criar Senha</font></h1></center>
+			
+					<center>
+					<form id="cadastro" name="#" method="post" action="cadas_senha.php" onsubmit="return validaCampo(); return false;">
+						</br>
+						<table width="625" border="0">
+			        	<td>CPF</td>
+			        	<tr>
+			      		<td><input name="cpf" placeholder="Digite seu CPF" type="text" id="cpf" size="70" maxlength="60" />
+			    		<span class="style1">*</span></td>
+			    		</tr>
+			    		<td>SENHA</td>
+			    		<tr>
+			  			<td><input name="senha" placeholder="Digite sua Senha" type="password" id="senha" size="70" maxlength="60" />
+			          	<span class="style1">*</span></td>
+			    		</tr>
+			    		<td>REPETIR SENHA</td>
+			    		<tr>
+			  			<td><input name="r_senha" placeholder="Digite sua Senha novamente" type="password" id="r_senha" size="70" maxlength="60" />
+			          	<span class="style1">*</span></td>
+			    		</tr>
+                        <tr><td>
+			        	<div id=salvar><input name="proximo" type="submit" id="proximo" value="Salvar" /></div>
+			            </td></tr>
+			  			</table>
+					</form>
+					</center>			
+					</br>
+					<div id="fim1">
+					© Copyright 2016 teachei.com.br - All Rights Reserved
+				    </div>	
+		</div>
+		
+	</body>
+</html>
