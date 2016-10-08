@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>TeAchei</title>
+		<link rel="stylesheet" type="text/css" href="estilo2.css">
+	</head>
+
+	<body bgcolor="orange" >
+	<?php
+
+    // $nome=$_POST["nome"];
+    // echo "$nome";
+    //<?php echo $_POST["login"];
+     //?>
+		
+		<input id="logo" type="image" src="img/logo_white.png" ><font color="" style="padding-left:730px;">Olá ,Admin</font>
+		<a href="teachei.html"><img src="img/sair.png" width="15" height="15" ></a>
+		
+		<div id="wrap" >
+			<header>
+				</br>
+				<form id="pesquisa" name="matricula" method="post" action="pesquisa.php" >
+				<input name="matricula" placeholder="Digite nome ou matricula" type="text" id="matricula" size="40" maxlength="60"  >
+				<input align="matricula" id="#" type="image" src="img/pesquisar.png" width="25" height="18" > 
+				</form>
+
+				</br></br>		
+				<form id="add" name="#" method="post" action="add2.php" onsubmit="return validaCampo(); return false;">
+
+			    <div id="cab">NOME MATRÍCULA CPF GERENCIAR</div>
+			    <div id=coluna1>
+                <input name="nome" placeholder="Seu nome" type="text" id="nome2" size="40" maxlength="60"   value="" />
+                <input name="matricula" placeholder="Sua matricula" type="text" id="matricula" size="40" maxlength="60" value=""/>
+                <input name="cpf" placeholder="Seu cpf" type="" id="cpf" size="40" maxlength="60"  value=""/>
+              
+                <button type="submit" nome="atualizar"><img  src="img/editar.png" width="30" height="15" ></button>
+                <button type="s" nome="deletar"><img  src="img/deletar.png" width="30" height="15" ></button>
+               </div>
+				<div id="e3"><a href="add3.php"><img  name="mais" src="img/add.png" width="30" height="30" ></a>
+				</div>
+				
+			
+				<div id="fim3">
+					© Copyright 2016 teachei.com.br - All Rights Reserved
+			    </div>
+                </form>
+		</div>
+	
+	</body>
+</html>
