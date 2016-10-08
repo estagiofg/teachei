@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>TeAchei</title>
+		<link rel="stylesheet" type="text/css" href="estilo2.css">
+	</head>
+
+	<body bgcolor="orange" >
+		
+		<input id="logo" type="image"  src="img/logo_white.png"><font color="" style="padding-left:730px;">Olá, Adm<? include "usuario.php"; ?></font>
+		<input id="sair" type="image" src="img/sair.png">
+
+		<div id="wrap" >
+			<header>
+				</br>
+				<form id="pesquisa" name="matricula" method="post" action="pesquisa.php" >
+				<input name="matricula" placeholder="Digite nome ou matricula" type="text" id="matricula" size="40" maxlength="60"  >
+				<input  id="#" type=image src="img/pesquisar.png" width="25" height="18" > 
+				</form>
+
+				</br></br>		
+				<form id="add" name="#" method="post" action="cadastro.php" onsubmit="return validaCampo(); return false;">
+
+			    <div id="cab1">NOME MATRÍCULA CPF GERENCIAR</div>
+              	<div id=coluna1>
+              	<script language="JavaScript" src="funcao.js"></script>
+                <input name="nome" placeholder="Digite seu nome" type="text" id="nome" size="40" maxlength="60" >
+                <input name="matricula" placeholder="Digite sua matricula" type="text" id="matricula" size="36" maxlength="60" >
+                <input name="cpf" placeholder="Digite seu cpf" type="text" id="cpf" size="36" maxlength="60" >
+                
+                            
+                </div>
+             
+
+	<div id="origem" align="center">
+	<script language="JavaScript" src="funcao.js"></script>
+	<input name="nome" placeholder="Digite seu nome" type="text" id="nome" size="40" maxlength="60" >
+                <input name="matricula" placeholder="Digite sua matricula" type="text" id="matricula" size="36" maxlength="60" >
+                <input name="cpf" placeholder="Digite seu cpf" type="text" id="cpf" size="36" maxlength="60" >
+	<button type="submit" name="adicionar"><img  src="img/salvar.jpg" width="30" height="15" ></button>
+	</div>
+	<div id="destino">
+	</div>
+
+
+</div>
+             	<div id=salvar1>
+				<button ><input type="button" value="Ir" onclick="javascript: location.href='add2.php';" /><img  src="img/add.png" width="30" height="30" ></button>
+				</div>
+				
+			
+				<div id="fim1">
+					© Copyright 2016 teachei.com.br - All Rights Reserved
+			    </div>
+                </form>
+		</div>
+	
+	</body>
+</html>
