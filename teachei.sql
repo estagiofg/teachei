@@ -25,7 +25,6 @@ constraint FK_disciplina_turma foreign key (cod_turma) references turma(cod_turm
 );
 
 create table professor (
-nome varchar(30) not null,
 nome_usu varchar(30) not null,
 matricula integer primary key,
 senha varchar(16) not null,
