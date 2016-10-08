@@ -28,7 +28,7 @@ create table professor (
 nome varchar(30) not null,
 senha password(30) not null,
 matricula integer primary key,
-cpf varchar(11) unique not null
+cpf varchar(11) primary key
 );
 
 create table aula (
