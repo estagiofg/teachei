@@ -1,0 +1,38 @@
+<ion-view class="fundo">
+	<div class="topo">
+		<h3>{{busca}}</h3>
+	</div>
+	<ion-content class="contener">
+		<img class="logo" src="images/logo.png">
+		<div>
+		</div>
+		<div class="label">
+		  Curso
+		</div>
+	    <div>
+			<select class="imobBoxTipo">
+				<option>Selecione seu Curso</option>
+			   <option ng-repeat="curso in cursos">{{curso}}</option>
+			</select>
+		</div>
+		<div class="label">
+		  Turno
+		</div>
+	    <div>
+			<select class="imobBoxTipo">
+			   <option>Selecione seu Turno</option>
+			   <option ng-repeat="turno in turnos">{{turno}}</option>
+			</select>
+		</div>
+		<div class="label">
+		  Período
+		</div>
+	    <div>
+			<select class="imobBoxTipo">
+			   <option>Selecione seu Período</option>
+			  	<option ng-repeat="periodo in periodos">{{periodo}}</option>
+			</select>
+		</div>
+		<a href="#/home/resultado"><button ng-click="avisoAluno(aviso)" class="btn-buscar">Buscar</button></a>
+	</ion-content>
+</ion-view>

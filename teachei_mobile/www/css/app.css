@@ -39,6 +39,93 @@ input, textarea  {
 
 body {
     /* margin: 0.5rem ; */
-    background: white ;
-    color: black ;
+    background-color: orange; 
+	height: 100%;
+	width: 100%;
+}
+
+.fundo{
+	background-color: #ed7d31;
+	height: 100%;
+	width: 100%;
+}
+
+.contener{
+	background-color: white;
+	height: 85%;
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 20%;
+	border-radius: 3%;
+}
+
+.icon-left{
+	color: white;
+	margin-left: 2%;
+}
+
+h3{
+	text-align: center;
+	color: white;
+}
+
+.topo{
+	margin-top: 10%;
+}
+
+.texto{
+	margin-top: -3%;
+}
+
+.logo{
+	height: 40%;
+	width: 70%;
+	margin-left: 16%;
+	margin-right: 10%;
+	margin-top: 3%;
+}
+
+.label{
+    margin-left: 6%;
+	margin-top: 3%;
+}
+
+.imobBoxTipo{
+   width: 88%;
+   margin-left: 6%;
+   margin-right: 3%;
+   height: 50px;
+   border-radius: 5px;
+   overflow: hidden;
+   background: url(../images/arrow.jpg) no-repeat right #fff;
+   border: 1px solid #ccc;
+}
+
+.imobBoxTipo select{
+    width: 260px;
+    margin-left: 16px;
+    background-color: #fff;
+    height: 38px;
+    line-height: 38px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif!important;   
+    color: #515151;
+    font-size: 12px;
+    background: transparent;
+}
+
+.btn-buscar{
+	width: 50%;
+	height: 50px;
+	background-color: #0070c0;
+	border-radius: 5px;
+	margin-left: 26%;
+	margin-right: 25%;
+	margin-top: 20%;
+	color: white;
+	
+}
+
+.aviso{
+	text-align: center;
 }
