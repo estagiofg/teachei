@@ -1,0 +1,43 @@
+
+/*Corpo*/
+#corpo{
+	background-color: #f36b21;
+}
+
+/*Imagem logo_white*/
+#logo_white{
+	padding-left: 550px;
+	width: 100px;
+	height: 30px;
+	margin-top: 110px;
+}
+
+#centro{
+	background: #ffffff;
+	width: 800px;
+	height: 600px;
+	position: absolute;
+	top: 0;
+	bottom:0;
+	right:0;
+	left: 0;
+	margin:auto;
+	
+	border-radius: 5px;
+	box-sizing: border-box;
+	
+}
+
+/*Form*/
+
+#cadastro{
+	margin-left: 200px;
+}
+
+/*Rodape*/
+#rodape{
+	color: #0000FF; 
+	font-size: x-small;
+	position: absolute;
+	padding: 170px 0PX 10PX 380px;
+}
