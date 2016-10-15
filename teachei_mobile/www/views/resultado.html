@@ -1,0 +1,24 @@
+<ion-view class="fundo">
+	<a href="#/home/busca" class="button icon-left ion-chevron-left button-clear button-light ">Voltar</a>
+	<div class="texto">
+		<h3>{{resultado}}</h3>
+	</div>
+	<ion-content ng-repeat="aviso in avisos" class="contener" >
+		<div class="aviso">
+			<h4>CURSO</h4>
+			<h2>{{aviso.curso}}</h2>
+			<hr>
+			<h4>PERÍODO</h4>
+			<h2>{{aviso.periodo}}</h2>
+			<hr>
+			<h4>DISCIPLINA</h4>
+			<h2>{{aviso.disciplina}}</h2>
+			<hr>
+			<h4>TURNO</h4>
+			<h2>{{aviso.turno}}</h2>
+			<hr>
+			<h1>{{aviso.lab}}</h1>
+			<h2>{{aviso.horario}}</h2>
+		</div>
+	</ion-content>
+</ion-view>
